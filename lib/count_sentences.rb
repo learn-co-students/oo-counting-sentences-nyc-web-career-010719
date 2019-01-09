@@ -2,15 +2,29 @@ require 'pry'
 
 class String
 
-  def sentence?
-    
+  def sentence?(str)
+    if str[str.length-1] == "."
+      return true
+    else
+      return false
+    end
   end
 
-  def question?
+  def question?(str)
+    if str[str.length-1] == "?"
+      return true
+    else
+      return false
+    end
 
   end
 
-  def exclamation?
+  def exclamation?(str)
+    if str[str.length-1] == "!"
+      return true
+    else
+      return false
+    end
 
   end
 
