@@ -2,33 +2,33 @@ require 'pry'
 
 class String
 
-  def sentence?(str)
-    if str[str.length-1] == "."
+  def sentence?
+    if self.end_with?(".")
       return true
     else
       return false
     end
   end
 
-  def question?(str)
-    if str[str.length-1] == "?"
+  def question?
+    if self.end_with?("?")
       return true
     else
       return false
     end
-
   end
 
-  def exclamation?(str)
-    if str[str.length-1] == "!"
+  def exclamation?
+    if self.end_with?("!")
       return true
     else
       return false
     end
-
   end
 
   def count_sentences
-
+    self.split(/\.\s|\!\s|\?\s/).count
+    # binding.pry
+    
   end
-end
+end #end of String class
